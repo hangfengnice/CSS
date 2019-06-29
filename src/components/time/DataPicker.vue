@@ -1,6 +1,6 @@
 <template>
   <div v-click-outside>
-    <div class="container text-center" >
+    <div class="container container1 text-center" >
     <input type="text" :value="formatDate" @focus="focus" @blur="blur">
     <span class='pull-right' >今天</span>
     </div>
@@ -143,9 +143,9 @@ let d = utils.getDate(this.time.year, this.time.month,1)
 
 <style lang='scss' scoped>
 
-[data-v-7ba5bd90] {
+.container1 {
+
   margin-top: 21px;
-  margin-bottom: 50px;
   background-color: #000;
   color: #fff;
   input{
@@ -153,7 +153,7 @@ let d = utils.getDate(this.time.year, this.time.month,1)
     border: none;
     outline: none;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 20px;
   }
 }
 .pannel{
