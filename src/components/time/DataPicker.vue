@@ -1,5 +1,5 @@
 <template>
-  <div class='wrapper' v-click-outside>
+  <div class='wrapper-data' >
     <div class="container container1 text-center">
       <input type="text" :value="formatDate" @focus="focus" @blur="blur" />
       <span class="pull-right">今天</span>
@@ -47,28 +47,28 @@ export default {
   components: {
     Content
   },
-  directives: {
-    clickOutside: {
-      bind(el, bindings, vnode) {
-        let handler = e => {
-          if (el.contains(e.target)) {
-            if (!vnode.context.isVisible) {
-              vnode.context.focus();
-            }
-          } else {
-            if (vnode.context.isVisible) {
-              vnode.context.blur();
-            }
-          }
-        };
-        el.handler = handler;
-        document.addEventListener("click", handler);
-      },
-      unbind(el) {
-        document.removeEventListener("click", el.handler);
-      }
-    }
-  },
+  // directives: {
+  //   clickOutside: {
+  //     bind(el, bindings, vnode) {
+  //       let handler = e => {
+  //         if (el.contains(e.target)) {
+  //           if (!vnode.context.isVisible) {
+  //             vnode.context.focus();
+  //           }
+  //         } else {
+  //           if (vnode.context.isVisible) {
+  //             vnode.context.blur();
+  //           }
+  //         }
+  //       };
+  //       el.handler = handler;
+  //       document.addEventListener("click", handler);
+  //     },
+  //     unbind(el) {
+  //       document.removeEventListener("click", el.handler);
+  //     }
+  //   }
+  // },
   data() {
     let { year, month } = utils.getYearMonthDay(new Date());
     return {
@@ -146,11 +146,11 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.wrapper{
+.wrapper-data{
   margin-top: 21px;
   margin-bottom: 50px;
 }
-.container1 {
+.container1{
   background-color: #000;
   color: #fff;
   input {
