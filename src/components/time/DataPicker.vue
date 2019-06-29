@@ -142,11 +142,7 @@ let d = utils.getDate(this.time.year, this.time.month,1)
 </script>
 
 <style lang='scss' scoped>
-[data-v-89e88acc].container{
-  display: fixed;
-  top:21px;
-  left: 0;
-}
+
 [data-v-7ba5bd90] {
   margin-top: 21px;
   margin-bottom: 50px;
