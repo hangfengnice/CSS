@@ -1,16 +1,16 @@
 <template>
   <div v-click-outside>
-    <div class="container container1 text-center" >
-    <input type="text" :value="formatDate" @focus="focus" @blur="blur">
-    <span class='pull-right' >今天</span>
+    <div class="container container1 text-center">
+      <input type="text" :value="formatDate" @focus="focus" @blur="blur" />
+      <span class="pull-right">今天</span>
     </div>
-    <div class=" pannel">
+    <div class="pannel">
       <div class="pannel-nav">
         <!-- <span>&lt;</span> -->
-        <span @click='prevMonth'>&lt;&lt;</span>
+        <span @click="prevMonth">&lt;&lt;</span>
         <span>{{time.year}} - {{time.month + 1}}</span>
 
-        <span @click='nextMonth'>&gt;&gt;</span>
+        <span @click="nextMonth">&gt;&gt;</span>
         <!-- <span>&gt;</span> -->
       </div>
       <div class="pannel-content">
@@ -19,7 +19,7 @@
           <div v-for=" i in 6" :key="i">
             <!-- 判断是否是当前月 当日 改变样式 -->
             <span
-            @click='chooseDate(visibledays[(i-1)*7 + (j-1)])'
+              @click="chooseDate(visibledays[(i-1)*7 + (j-1)])"
               v-for="j in 7"
               :key="j"
               class="cell cell-days"
@@ -31,20 +31,20 @@
           </div>
         </div>
       </div>
-      <div class="pannel-footer"><i class="footer_color iconfont icon-icon_xiangshang_"></i></div>
-    <Content></Content>
-
+      <div class="pannel-footer">
+        <i class="footer_color iconfont icon-icon_xiangshang_"></i>
+      </div>
+      <Content></Content>
     </div>
   </div>
-
 </template>
 
 <script>
 import * as utils from "../../util";
-import Content from './Content'
+import Content from "./Content";
 
 export default {
-  components:{
+  components: {
     Content
   },
   directives: {
@@ -70,10 +70,10 @@ export default {
     }
   },
   data() {
-    let {year, month} = utils.getYearMonthDay(new Date())
+    let { year, month } = utils.getYearMonthDay(new Date());
     return {
       weekday: ["日", "一", "二", "三", "四", "五", "六"],
-      time: {year, month},
+      time: { year, month },
       value: new Date(),
       isVisible: false
     };
@@ -86,7 +86,9 @@ export default {
       this.isVisible = false;
     },
     isCurrentMonth(date) {
-      let { year, month } = utils.getYearMonthDay(utils.getDate(this.time.year,this.time.month,1));
+      let { year, month } = utils.getYearMonthDay(
+        utils.getDate(this.time.year, this.time.month, 1)
+      );
       let { year: y, month: m } = utils.getYearMonthDay(date);
       return year === y && month === m;
     },
@@ -95,24 +97,24 @@ export default {
       let { year: y, month: m, day: d } = utils.getYearMonthDay(date);
       return year === y && month === m && day === d;
     },
-    chooseDate(date){
-      this.time = utils.getYearMonthDay(date)
-      this.value = date
+    chooseDate(date) {
+      this.time = utils.getYearMonthDay(date);
+      this.value = date;
     },
-    isSelect(date){
+    isSelect(date) {
       let { year, month, day } = utils.getYearMonthDay(this.value);
       let { year: y, month: m, day: d } = utils.getYearMonthDay(date);
       return year === y && month === m && day === d;
     },
-    prevMonth(){
-      let d = utils.getDate(this.time.year, this.time.month,1)
-      d.setMonth(d.getMonth()-1)
-      this.time = utils.getYearMonthDay(d)      
+    prevMonth() {
+      let d = utils.getDate(this.time.year, this.time.month, 1);
+      d.setMonth(d.getMonth() - 1);
+      this.time = utils.getYearMonthDay(d);
     },
-    nextMonth(){
-let d = utils.getDate(this.time.year, this.time.month,1)
-      d.setMonth(d.getMonth()+1)
-      this.time = utils.getYearMonthDay(d) 
+    nextMonth() {
+      let d = utils.getDate(this.time.year, this.time.month, 1);
+      d.setMonth(d.getMonth() + 1);
+      this.time = utils.getYearMonthDay(d);
     }
   },
   mounted() {
@@ -120,7 +122,9 @@ let d = utils.getDate(this.time.year, this.time.month,1)
   },
   computed: {
     visibledays() {
-      let { year, month } = utils.getYearMonthDay(utils.getDate(this.time.year,this.time.month,1));
+      let { year, month } = utils.getYearMonthDay(
+        utils.getDate(this.time.year, this.time.month, 1)
+      );
       let currentFirstDay = utils.getDate(year, month, 1);
       // 获取当前是周几
       let week = currentFirstDay.getDay();
@@ -134,7 +138,7 @@ let d = utils.getDate(this.time.year, this.time.month,1)
       return arr;
     },
     formatDate() {
-      let { year, month, day } = utils.getYearMonthDay( this.value);
+      let { year, month, day } = utils.getYearMonthDay(this.value);
       return `${year}-${month + 1}-${day}`;
     }
   }
@@ -142,13 +146,14 @@ let d = utils.getDate(this.time.year, this.time.month,1)
 </script>
 
 <style lang='scss' scoped>
-
-.container1 {
-
+[data-v-7ba5bd90]{
   margin-top: 21px;
+  margin-bottom: 50px;
+}
+.container1 {
   background-color: #000;
   color: #fff;
-  input{
+  input {
     background-color: #000;
     border: none;
     outline: none;
@@ -156,7 +161,7 @@ let d = utils.getDate(this.time.year, this.time.month,1)
     margin-left: 20px;
   }
 }
-.pannel{
+.pannel {
   // overflow: hidden;
   position: absolue;
   background-color: #fff;
@@ -171,8 +176,9 @@ let d = utils.getDate(this.time.year, this.time.month,1)
     }
   }
   .pannel-content {
-    padding:0 20px;
-    .cell , .cell-data{
+    padding: 0 20px;
+    .cell,
+    .cell-data {
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -180,7 +186,8 @@ let d = utils.getDate(this.time.year, this.time.month,1)
       height: 46px;
       font-weight: bold;
     }
-    .cell:hover , .select{
+    .cell:hover,
+    .select {
       border-radius: 50%;
       background-color: rgb(86, 136, 235);
       box-sizing: border-box;
@@ -200,9 +207,8 @@ let d = utils.getDate(this.time.year, this.time.month,1)
     background-color: rgb(86, 136, 235);
     border-radius: 50%;
   }
-  .cell-data{
-    color: rgb(196, 196, 196)
+  .cell-data {
+    color: rgb(196, 196, 196);
   }
 }
-
 </style>
