@@ -1,5 +1,5 @@
 <template>
-  <div v-click-outside>
+  <div class='wrapper' v-click-outside>
     <div class="container container1 text-center">
       <input type="text" :value="formatDate" @focus="focus" @blur="blur" />
       <span class="pull-right">今天</span>
@@ -146,7 +146,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-[data-v-7ba5bd90]{
+.wrapper{
   margin-top: 21px;
   margin-bottom: 50px;
 }
