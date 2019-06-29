@@ -1,5 +1,5 @@
 <template>
-  <div class='wrapper-data' >
+  <div  >
     <div class="container container1 text-center">
       <input type="text" :value="formatDate" @focus="focus" @blur="blur" />
       <span class="pull-right">今天</span>
@@ -146,11 +146,8 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.wrapper-data{
-  margin-top: 21px;
-  margin-bottom: 50px;
-}
 .container1{
+  margin-top: 21px;
   background-color: #000;
   color: #fff;
   input {
@@ -163,6 +160,7 @@ export default {
 }
 .pannel {
   // overflow: hidden;
+  margin-bottom: 50px; 
   position: absolue;
   background-color: #fff;
   color: #000;
