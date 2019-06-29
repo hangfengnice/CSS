@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Time></Time>
 
-    <router-view/>
+    <router-view />
     <Footer></Footer>
   </div>
 </template>
@@ -11,12 +10,11 @@
 <script>
 import Header from "./components/head-footer/Header.vue";
 import Footer from "./components/head-footer/Footer.vue";
-import Time from "./components/time/Time.vue";
+
 export default {
   components: {
     Header,
-    Footer,
-    Time
+    Footer
   }
 };
 </script>

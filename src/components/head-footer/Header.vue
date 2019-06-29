@@ -1,11 +1,12 @@
 <template>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar  navbar-fixed-top">
       <div class="container">
         <i class="iconfont icon-xinhao"></i>
         <span class="nav-ch">中国移动</span>
         <i class="iconfont icon-wifi"></i>
         <i class="iconfont icon-dianchi pull-right"></i>
       </div>
+
     </nav>
 </template>
 
@@ -16,6 +17,10 @@ export default {
 </script>
 
 <style scoped>
+.navbar{
+  min-height: 21px;
+  background-color: #000;
+}
 #app .iconfont,
 .nav-ch {
   color: #fff;
