@@ -8,10 +8,27 @@
 </head>
 <body>
   
-<div id="app"></div>
+<script>
 
+  Array.prototype.value1 = function (){
 
-  
-  <!-- <script scr='https://cdn.bootcss.com/jquery/3.2.1/core.js'></script> -->
+    let i = 0;
+    let _self = this
+    return {
+      next(){
+        const done = i >= _self.length
+        const value = done ? "undefined" : _self[i++]
+
+        return {
+          value,
+          done 
+        }
+      }
+    }
+  }
+
+  const color = [1,2,3]
+
+  </script>
 </body>
 </html>

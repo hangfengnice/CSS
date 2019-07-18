@@ -1,56 +1,36 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack')
+
 
 module.exports = {
   mode: "development",
-  entry: path.resolve(__dirname, "src/index.js"),
+  entry: path.resolve(__dirname,'src/app.js'),
   output: {
-    filename: "[name].bundle.[hash:8].js",
-    path: path.join(__dirname, "build")
+    filename: "app.js",
+    path: path.resolve(__dirname,'build')
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      template: "index.html"
-    }),
-    new VueLoaderPlugin()
+     new HtmlWebpackPlugin({
+       title: 'Output Management',
+       template: path.resolve(__dirname,'index.html')
+     })
   ],
-  devServer: {
-    contentBase: "./dist"
+  optimization: {
+    minimize: true
   },
+  devServer: {
+        contentBase: './build',
+        hot: true
+      },
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.(png|svg|jpg|gif|jpeg)$/,
-        use: ["file-loader"]
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"]
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-      },
-      {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-            plugins: [
-              "@babel/plugin-transform-runtime"
-            ]
-          }
-        }
-      }
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
+  },
+  performance: {
+    hints:false
   }
-};
+}
