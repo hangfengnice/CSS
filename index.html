@@ -5,29 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    main{
+
+      width: 750px;
+      margin: 0 auto;
+      border: 1px solid #000;
+    }
+    .firstnav{
+      
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+    ul{
+      padding: 0;
+    }
+    li{
+      list-style: none;
+      float: left;
+      margin-right: 10px;
+      border-right: 1px solid #000;
+      line-height: 32px;
+    }
+  </style>
 </head>
 <body>
-  
-<script>
+  <main>
+      <h4>js 面向对象</h4>
+      <div class="tabsbox" id="tab">
+        <nav class="firstnav">
+          <ul>
+            <li class="liactive"><span>测试1</span></li>
+            <li ><span>测试2</span></li>
+            <li ><span>测试3</span></li>
+          </ul>
+          <div class="tabadd"><span>+</span></div>
+        </nav>
+        <!-- tab 内容 -->
+    
+        <div class="tabscon">
+          <section class="conactive">测试1</section>
+          <section>测试2</section>
+          <section>测试3</section>
+        </div>
+      </div>
+  </main>
+  <script>
+    class Tab{
+      constructor(id){
 
-  Array.prototype.value1 = function (){
-
-    let i = 0;
-    let _self = this
-    return {
-      next(){
-        const done = i >= _self.length
-        const value = done ? "undefined" : _self[i++]
-
-        return {
-          value,
-          done 
+        this.main = document.getElementById(id)
+        this.lis = this.main.querySelectorAll('li')
+        this.sections = this.main.querySelectorAll('section')
+        this.init()
+      }
+      init(){
+        for(let i = 0; i < this.lis.length; i ++){
+          console.log(this)
+          console.log(this.lis[i])
+          this.lis[i].index = i
+          this.lis[i].onclick = function (){
+            console.log(this.index)
+          }
         }
       }
-    }
-  }
+      toggleTab(){
 
-  const color = [1,2,3]
+      }
+
+      addTab(){
+
+      }
+
+      deleteTab(){
+
+      }
+
+      editTab(){
+
+      }
+    }
+
+  new Tab("tab")
 
   </script>
 </body>
