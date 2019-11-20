@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>outline</title>
+  <style>
+    [type='submit'] {
+      position: absolute;
+      clip: rect(0 0 0 0);
+    }
+    .btn {
+      display: inline-block;
+      padding: 2px 12px;
+      background-color: #cd0000;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    :focus + .btn {
+      outline: 1px dotted Highlight;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+    /* input:focus {
+      border-color: Highlight;
+    } */
+  </style>
+</head>
+<body>
+  <!-- outline
+    1. 取消outline：outline: 0; ||　outline: none;
+    2. outline是不占据空间的
+  -->
+ <input id='t' type="submit">
+ <label for="t" class="btn">提交</label>
+  <script>
+    
+  </script>
+</body>
+</html>
