@@ -1,12 +1,20 @@
-# 先讲点HTML 再聊 CSS
-
-## HTML
-
-1. 是啥
-2. 基本结构
-3. 标签是啥东西
-4. 属性是什么
+# Cascading Style Sheet (CSS)
 
 - 标签
   - a
   - 属性 id href title targe t
+  - img
+  - 属性 height width
+  
+## 属性
+
+1. border-bottom , underline
+2. 可以继承的属性 font-family 一般是字体的属性
+3. position
+4. float
+5. px 像素指定高度
+6. a :link :visit :hover :focus :active
+
+## 书籍
+
+1. 2019.11.30 读完了 《css选择器世界》 感到css选择器的不简单 需要多练 多学

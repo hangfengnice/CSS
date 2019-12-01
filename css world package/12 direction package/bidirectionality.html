@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bidirectionality</title>
+  <style>
+    .rtl {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+    }
+    .rtl {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- bidirecttionality 双向性的 -->
+  <!-- example -->
+  <p class="rtl">开头是我，<span style="unicode-bidi:normal;">这是中间</span>，让后这是结束</p>
+  <p class="rtl">开头是我，<span style="unicode-bidi:embed;">这是中间</span>，让后这是结束</p>
+  <!-- 插入特殊字符 -->
+  <p class="rtl">开头是我，<span>&#x202B这是中间&#x202C</span>，让后这是结束</p>
+  <!-- bidi-override -->
+  <p>&#x202E一二三四五六七八九十</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>placeholder-shown 空值判断</title>
+  <style>
+    textarea:placeholder-shown + small::before,
+    input:placeholder-shown + small::before{
+      content: '尚未输入内容';
+      color: red;
+      font-size: 87.5%;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" placeholder="请输入内容"><small></small>
+  <textarea name="" id="" cols="30" rows="10" placeholder=" "></textarea> <small></small>
+  
+  <script>
+    
+  </script>
+</body>
+</html>

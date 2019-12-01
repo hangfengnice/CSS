@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>direction</title>
+  <style>
+    .icon-delete::before {
+      content: attr(data-title);
+      position: absolute;
+      bottom: 0;
+      background-color: #333;
+      color: #fff;
+      border-radius: 4px;
+      right: -3em;
+    }
+    .icon-delete::after {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      right: -1.08em;
+      width: 0;
+      height: 0;
+      border: .4em solid transparent;
+      border-right-color: #333;
+    }
+    .css-tips {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <a href="javascript:" data-title="删除" role="button" class="icon-delete css-tips">删除</a>
+  <script>
+    
+  </script>
+</body>
+</html>

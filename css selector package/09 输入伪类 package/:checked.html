@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>test</title>
+  <title>:checked伪类</title>
   <style>
-    div, p {
-      height: 2000px;
+    :checked {
+      background: #000;
     }
-    h3 {
-      height: 300px;
+    [checked] {
+      color: green;
     }
   </style>
 </head>
 <body>
-  <a href="#p">p</a>
-  <div>hello</div>
-  <p id='p'>great <a href="#bottom">bottom</a></p>
-  <h3 id='buttom'>herer <a href="#p"></a></h3>
+<div checked>hello</div>
+<input type="checkbox">
+  <script>
+    document.querySelector("[type='checkbox']").checked = true
+  </script>
 </body>
 </html>
