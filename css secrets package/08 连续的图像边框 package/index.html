@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>连续的图像边框</title>
+  <style>
+    div {
+      width: 400px;
+      height: 400px;
+      padding: 1em;
+      border: 1em solid transparent;
+      background: linear-gradient(white, white) padding-box,
+                  url(../../images/hf_yy.jpeg) border-box 0 0 / cover;
+    }
+    @keyframes ants {
+      to {
+        background-position: 100%;
+      }
+    }
+    .yy {
+      width: 400px;
+      height: 400px;
+      padding: 1em;
+      border: 1px solid transparent;
+      background: linear-gradient(white, white) padding-box,
+                  repeating-linear-gradient(-45deg, black 0, black 25%,
+                   white 0, white 50%) 0 / .6em .6em;
+      animation: ants 12s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    hello hangfeng
+  </div>
+  <p class="yy">
+    hello yingying
+  </p>
+</body>
+</html>
