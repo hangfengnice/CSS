@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>后代选择符</title>
+</head>
+<body>
+  <div id="myId">
+    <div class="lonely">单身如我</div>
+    <div class="outer">
+      <div class="inner">内容开花</div>
+    </div>
+  </div>
+  <script>
+    console.log(document.querySelectorAll('#myId div div').length);
+    console.log(document.querySelector('#myId').querySelectorAll('div div').length);
+    console.log(document.querySelector('#myId').querySelectorAll(':scope div div').length);
+  </script>
+</body>
+</html>
