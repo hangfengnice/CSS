@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>了解</title>
+    <style>
+      /*  单词匹配 */
+      [data-align~="left"] {
+        color: deepskyblue;
+      }
+      [data-align~="right"] {
+        color: lightcoral;
+      }
+
+      /* 起始匹配 */
+      [data-align|="val"] {
+        color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="checkbox" checked disabled />
+
+    <div data-align="left">left</div>
+    <div data-align="right">right</div>
+
+    <div data-align="val">right</div>
+    <div data-align="val-">right</div>
+    <div data-align="left val">right</div>
+    <script>
+      checkbox.checked = false;
+      checkbox.disabled = false;
+    </script>
+  </body>
+</html>
