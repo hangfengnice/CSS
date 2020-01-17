@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>:visited</title>
+  <style>
+  small {
+    position: absolute;
+    color: white;
+  }
+  small::after {
+    content: 'visited'
+  }
+  .a1:visited small {
+    color: deepskyblue;
+  }
+  .a2 {
+    color: blue;
+  }
+  .a2:visited {
+    color: rgba(255, 0, 0, 0.3);
+  }
+  .a3 {
+    color: blue
+  }
+  .a3:visited {
+    color: red;
+    background-color: gray;
+  }
+  /* 伪类:visited 的色值只能重置 */
+  .a4 {
+    color: blue;
+    background-color: white;
+  }
+  .a4:visited {
+    color: red;
+    background-color: gray;
+  }
+
+  </style>
+</head>
+<body>
+  <a href="#a1" class="a1">文字a1<small></small></a>
+  <br>
+  <a href="#a2" class="a2">文字a2</a>
+  <br>
+  <a href="#a3" class="a3">有背景色吗？ </a>
+  <br>
+  <a href="#a4" class="a4">有背景色吗？ </a>
+
+  <script>
+    // getComputeStyle 不能取到 当前的颜色值
+    console.log(getComputedStyle(document.links[3]).color);
+  </script>
+</body>
+</html>

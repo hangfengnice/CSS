@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>active</title>
+  <style>
+    p:active {
+      outline: solid lightblue;
+    }
+    input:active {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+    [href] img:active {
+      outline: 999px solid rgba(0, 0, 0, 0.5);
+      outline-offset: -999px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  </style>
+</head>
+<body>
+  <p>
+    <img src="../../images/hf_yy.jpeg" alt="">
+  </p>
+  <input type="text" placeholder="hello hangfeng">
+
+  <a href="javascript: "><img src="../../images/school.jpeg" alt=""></a>
+</body>
+</html>

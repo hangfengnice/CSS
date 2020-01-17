@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>:target</title>
+  <style>
+    :target {
+      color: deepskyblue;
+    }
+    :target + li {
+      color: deepskyblue;
+    }
+  </style>
+</head>
+<body>
+  <a name='cs-anchor'>cs-anchor</a>
+  <ul>
+    <li id="cs-first">第1行，id 是cs-first</li>
+    <li id="cs-anchor">第2行，id 是cs-anchor</li>
+    <li id="cs-anchor">第2行copy，id 是cs-anchor</li>
+    <li id="cs-last1" hidden>第3行，id 是cs-last</li>
+    <li id="cs-last2">第3行，id 是cs-last</li>
+  </ul>
+  <a name='testa'>testa</a>
+  
+</body>
+</html>
