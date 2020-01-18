@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>:empty</title>
+    <style>
+      :empty {
+        width: 120px;
+        height: 120px;
+        border: 10px dashed;
+      }
+      textarea {
+        vertical-align: top;
+        margin-right: 10px;
+      }
+      /* textarea:not(:empty) + span::before {
+        content: "√";
+        color: green;
+      } */
+      textarea:not(:placeholder-shown) + span::before {
+        content: "√";
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cs-empty"> </div>
+
+    <textarea placeholder="hello"></textarea><span></span>
+
+    <!-- 1 隐藏空元素 -->
+    .cs-module:empty {
+      display: none
+    }
+    <!-- 2 字段缺失只能提示 -->
+    dd:empty::before {
+      content: '暂无';
+      color: gray;
+    }
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>:nth-child</title>
+    <style>
+      tr:nth-child(-n + 3) td {
+        background: cornsilk;
+      }
+      tr:nth-child(n + 4):nth-child(-n + 10) td {
+        background: mintcream;
+      }
+      tr:nth-child(1) td {
+        background: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" width="60">排名</th>
+          <th scope="col">姓名</th>
+          <th scope="col">总积分</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td><a href>hangfeng</a></td>
+        <td>105</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href>yingying</a></td>
+        <td>78</td>
+      </tr>
+    </table>
+  </body>
+</html>

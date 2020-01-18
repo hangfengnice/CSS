@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>:root</title>
+  <style>
+    html {
+      overflow-y: scroll;
+    }
+    .inner {
+      height: 50px;
+      width: 190px;
+      overflow-y: scroll;
+      margin-left: calc(100vw - 100%);
+    }
+    body {
+      height: 2000px;
+    }
+    /* :root {
+      background-color: deepskyblue;
+    } */
+  </style>
+</head>
+<body>
+    <div class="inner">
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+      hello
+    </div>
+
+    <script>
+      console.log(document.body.clientWidth, getComputedStyle(document.querySelector('.inner')).marginLeft);
+    </script>
+  
+</body>
+</html>
