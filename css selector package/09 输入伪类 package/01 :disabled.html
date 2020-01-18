@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>:disabled</title>
+  <style>
+    :disabled {
+      border: 1px solid lightgray;
+      background-color: #f0f0f3;
+    }
+    :enabled {
+      border: 1px solid deepskyblue;
+      background-color: lightskyblue;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" disabled value="禁用">
+  <input type="text" readonly value='只读'>
+  <input type="text" value="普通">
+
+  <a href>链接</a>
+
+  <script>
+    console.log(document.querySelectorAll(':enabled').length);
+  </script>
+</body>
+</html>

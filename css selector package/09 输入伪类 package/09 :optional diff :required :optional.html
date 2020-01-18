@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>:optional diff :required :optional</title>
+    <style>
+      :optional {
+        box-shadow: 0 0 0 2px red;
+      }
+      [type="radio"]:required {
+        box-shadow: 0 0 0 2px deepskyblue;
+      }
+      [type="radio"]:invalid {
+        outline: 2px dashed red;
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>按钮</button>
+    <input type="submit" value="按钮" />
+
+    <input type="radio" name="required" required />
+    <input type="radio" name="required" />
+    <input type="radio" name="required" />
+    <input type="radio" name="required" />
+    <input type="radio" name="required" />
+  </body>
+</html>
