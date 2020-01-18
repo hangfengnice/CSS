@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>:is</title>
+    <style>
+      /* ol ol li,
+    ol ul li,
+    ul ol li,
+    ul ul li {
+      margin-left: 2em;
+    } */
+      /* 使用 :is */
+      :is(ul, ol) :is(ul, ol) li {
+        /* margin-left: 2em; */
+        color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <ul>
+        <li>hello</li>
+      </ul>
+    </ul>
+  </body>
+</html>
