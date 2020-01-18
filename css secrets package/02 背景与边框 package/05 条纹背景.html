@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>条纹背景</title>
+  <style>
+    p {
+      height: 60px;
+    }
+    .hf-p {
+      background: linear-gradient(#fb3 30%, #58a 0);
+      background-size: 100% 30px;
+    }
+    .hf-p1 {
+      background: linear-gradient(#fb3 30%, #58a 0, #58a 60%, yellowgreen 0);
+      background-size: 100% 30px;
+    }
+    .hf-p2 {
+      width: 60px;
+      background: linear-gradient( 45deg,#fb3 50%, #58a 0);
+      background-size: 30px 30px;
+    }
+    .hf-p3 {
+      background: linear-gradient( 45deg,#fb3 25%, #58a 0, #58a 50%,  #fb3 0, #fb3 75%, #58a 0);
+      background-size: 42px 42px;
+    }
+    .hf-p4 {
+      background: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+    }
+    .hf-p5 {
+      background: #58a;
+      background-image: repeating-linear-gradient(30deg, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0.1) 15px, transparent 0, transparent 30px);
+    }
+  </style>
+</head>
+<body>
+  <p class="hf-p">
+    hello hangfeng
+  </p>
+  <p class="hf-p1">
+    hello hangfeng
+  </p>
+  <!-- 斜向条纹 -->
+  <p class="hf-p2">
+    hello hangfeng
+  </p>
+  <p class="hf-p3">
+    hello hangfeng
+  </p>
+  <p class="hf-p4">
+    hello hangfeng
+  </p>
+  <p class="hf-p5">
+    hello hangfeng
+  </p>
+</body>
+</html>

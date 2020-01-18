@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>多重边框</title>
+    <style>
+      .p1 {
+        box-shadow: 0 0 1em 2em #f4aab9, 0 0 0 4em #66ccff;
+        margin: 4em;
+        padding: 1em;
+      }
+      .p2 {
+        box-shadow: 0 0 0 2em #f4aab9, 0 0 0 4em #66ccff;
+        margin: 4em;
+        padding: 1em;
+        margin-top: 2em;
+      }
+      .p3 {
+        border: 10px solid deepskyblue;
+        border-radius: 5px;
+        outline: 5px dotted lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="p1">hello</p>
+    <p class="p2">hello</p>
+    <p class="p3">hello</p>
+  </body>
+</html>
