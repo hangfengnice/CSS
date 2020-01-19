@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>复杂的背景图案</title>
+  <style>
+    p {
+      width: 90px;
+      height: 90px;
+    }
+    .hf-p {
+      width: 30px;
+      height: 30px;
+      background: #655;
+      background-image: radial-gradient(tan 30%, transparent 0);
+      background-size: 30px 30px;
+    }
+    /* 棋盘 */
+    .hf-p1 {
+      background: #eee;
+      background-image: linear-gradient(45deg, #bbb 50%, transparent 0);
+      background-size: 30px 30px;
+    }
+    .hf-p2 {
+      background: #eee;
+      background-image: linear-gradient(45deg, transparent 75%, #bbb 0);
+      background-size: 30px 30px;
+    }
+    .hf-p3 {
+      background: #eee;
+      background-image: 
+        linear-gradient(45deg, #000 25%, transparent 0),
+        linear-gradient(45deg, transparent 75%, #bbb 0);
+      background-position: 0 0, 15px 15px;
+      background-size: 30px 30px;
+    }
+    .hf-p4 {
+      background: #eee;
+      background-image: 
+        linear-gradient(45deg, #bbb 25%, transparent 0),
+        linear-gradient(45deg, transparent 75%, #bbb 0),
+        linear-gradient(45deg, #bbb 25%, transparent 0),
+        linear-gradient(45deg, transparent 75%, #bbb 0);
+        background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
+      background-size: 30px 30px;
+    }
+    .hf-p5 {
+      background: #eee;
+      background-image: 
+        linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, 0.25) 0),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, 0.25) 0);
+        background-position: 0 0, 15px 15px;
+      background-size: 30px 30px;
+    }
+    /* svg */
+    .hf-p6 {
+      background: #eee url('data:image/svg+xml,\<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".25" >\<rect x="50" width="50" height="50" />\<rect y="50" width="50" height="50" />\</svg>');
+      background-size: 30px 30px;
+    }
+  </style>
+</head>
+<body>
+  <p class="hf-p">
+    hello hangfeng
+  </p>
+  <p class="hf-p1"></p>
+  <p class="hf-p2"></p>
+  <p class="hf-p3"></p>
+  <p class="hf-p4"></p>
+  <p class="hf-p5"></p>
+  <p class="hf-p6">svg</p>
+</body>
+</html>
