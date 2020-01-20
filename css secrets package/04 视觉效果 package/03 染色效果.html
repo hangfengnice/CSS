@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>染色效果</title>
+  <style>
+    .tined-image {
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      background-color: hsl(335, 100%, 50%);
+      background-blend-mode: luminosity;
+      transition: .5s background-color;;
+    }
+    .tined-image:hover {
+      background-color: transparent;
+    }
+    .hf-a {
+      background: hsl(335, 100%, 50%);
+      display: inline-block;
+      width: 200px;height: 200px;
+    }
+    .hf-img {
+      mix-blend-mode: luminosity;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="tined-image" style="background-image: url(../../images/hf_yy.jpeg);">
+  </div>
+  <a href class='hf-a'>
+    <img src="../../images/ice_gril.jpeg" class="hf-img" alt="">
+  </a>
+</body>
+</html>

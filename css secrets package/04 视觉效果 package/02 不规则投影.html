@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>不规则投影</title>
+    <style>
+      .hf-f {
+        border: 2px dashed;
+        box-shadow: 2px 2px 4px black;
+      }
+      .hf-f1 {
+        margin: 1em;
+        border: 4px dashed;
+        filter: drop-shadow(2px 2px 2px black);
+      }
+      .hf-s {
+        color: deeppink;
+        border: 2px solid;
+        text-shadow: 0.1em 0.2em yellow;
+        filter: drop-shadow(0.05em 0.05em 0.1em gray);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hf-f">
+      hello hangfeng
+    </div>
+    <div class="hf-f1">
+      hello hangfeng
+    </div>
+    <span class="hf-s">
+      hello yingying
+    </span>
+  </body>
+</html>
