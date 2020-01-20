@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>现实中的文字效果</title>
+    <style>
+      .hf-span {
+        background: hsl(210, 13%, 60%);
+        color: hsl(210, 13%, 30%);
+        text-shadow: 0 0.03em 0.03em hsla(0, 0%, 100%, 0.8);
+      }
+      .hf-span1 {
+        background: deeppink;
+        color: white;
+        text-shadow:
+         1px 1px black,
+         1px -1px black,
+         -1px -1px black,
+         -1px 1px black;
+      }
+      /* 文字模糊 filter */
+      .hf-span2 {
+        background: #203;
+        color: white;
+        transition: 1s;
+      }
+      .hf-span2:hover {
+        filter: blur(.1em);
+      }
+      /* 文字模糊 */
+      .hf-span3 {
+        background: #203;
+        color: white;
+        transition: 1s;
+      }
+      .hf-span3:hover {
+        color: transparent;
+        text-shadow: 0 0 .1em white, 0 0 .1em white;
+      }
+      /* 3d 效果 */
+      .hf-span4 {
+        background: #58a;
+        color: white;
+        text-shadow: 
+          0 1px hsl(0, 0%, 85%),
+          0 2px hsl(0, 0%, 80%),
+          0 3px hsl(0, 0%, 75%),
+          0 4px hsl(0, 0%, 70%),
+          0 5px hsl(0, 0%, 65%),
+          0 5px 10px black
+        ;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="hf-span">
+      hello hangfeng
+    </span>
+    <!-- 空心字效果 -->
+    <span class="hf-span1">
+      hello hangfeng
+    </span>
+    <!-- 文字外发光效果 -->
+    <span class="hf-span2">
+      hello hangfeng
+    </span>
+    <span class="hf-span3">
+      hello hangfeng
+    </span>
+    <span class="hf-span4">
+      hello hangfeng
+    </span>
+  </body>
+</html>

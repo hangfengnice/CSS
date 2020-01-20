@@ -8,6 +8,8 @@
 
 ### css 揭秘
 
+1. 连子符 font-variant-ligatures: common-ligatures;
+
 - 标签
   - a
   - 属性 id href title targe t
