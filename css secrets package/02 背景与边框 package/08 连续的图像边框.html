@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>连续的边框背景</title>
+    <style>
+      .hf-bg {
+        width: 6em;
+        height: 6em;
+        border: 1em solid transparent;
+        background: linear-gradient(white, white), url(../../images/hf_yy.jpeg);
+        background-size: cover;
+        background-clip: padding-box, border-box;
+        background-origin: border-box;
+      }
+      @keyframes ants {
+        to {
+          background-position: 100%;
+        }
+      }
+      .hf-ants {
+        width: 6em;
+        height: 6em;
+        padding: 1em;
+        border: 1px solid transparent;
+        background: linear-gradient(white, white) padding-box,
+          repeating-linear-gradient(
+              -45deg,
+              black 0,
+              black 25%,
+              white 0,
+              white 50%
+            )
+            0 / 0.6em 0.6em;
+        animation: ants 12s infinite;
+      }
+      .hf-tips {
+        border-top: 0.2em solid transparent;
+        border-image: 100% 0 0
+          linear-gradient(90deg, currentColor 4em, transparent 0);
+        padding-top: 1em;
+        margin-top: 0.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hf-bg">
+      hello
+    </div>
+    <!-- <img src="../../images/hf_yy.jpeg" alt=""> -->
+    <div class="hf-ants"></div>
+
+    <div class="hf-tips">
+      hello yingying
+    </div>
+  </body>
+</html>

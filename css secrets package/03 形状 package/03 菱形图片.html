@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>菱形图片</title>
+    <style>
+      .hf-pic {
+        width: 500px;
+        height: 500px;
+        transform: rotate(45deg);
+        overflow: hidden;
+      }
+      .hf-i {
+        transform: rotate(-45deg) scale(1.42);
+        max-width: 100%;
+      }
+
+      .hf-p {
+        width: 300px;
+        height: 300px;
+      }
+      .hf-clip {
+        transition: clip-path 1s;
+        max-width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      .hf-p:hover .hf-clip {
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hf-pic">
+      <img src="../../images/hf_yy.jpeg" alt="" class="hf-i" />
+    </div>
+    <p class="hf-p">
+      <img src="../../images/hf_yy.jpeg" alt="" class="hf-clip" />
+    </p>
+  </body>
+</html>
