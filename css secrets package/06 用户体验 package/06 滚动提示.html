@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>滚动提示</title>
+    <style>
+      .hf-ul {
+        overflow: auto;
+        width: 10em;
+        height: 8em;
+        padding: 0.3em 0.5em;
+        border: 1px solid silver;
+        background: linear-gradient(white 15px, hsla(0, 0%, 100%, 0)) 0 0 / 100%
+            50px,
+          radial-gradient(at top, rgba(0, 0, 0, 0.2), transparent 70%) 0 0 /
+            100% 15px,
+          linear-gradient(to top, white 15px, hsla(0, 0%, 100%, 0)) bottom /
+            100% 50px,
+          radial-gradient(at bottom, rgba(0, 0, 0, 0.2), transparent 70%) bottom /
+            100% 15px;
+        background-repeat: no-repeat;
+        background-attachment: local, scroll, local, scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="hf-ul">
+      <li class="hf-li">hangfeng1</li>
+      <li class="hf-li">hangfeng2</li>
+      <li class="hf-li">hangfeng3</li>
+      <li class="hf-li">hangfeng4</li>
+      <li class="hf-li">hangfeng5</li>
+      <li class="hf-li">hangfeng6</li>
+      <li class="hf-li">hangfeng7</li>
+      <li class="hf-li">hangfeng8</li>
+      <li class="hf-li">hangfeng9</li>
+      <li class="hf-li">hangfeng10</li>
+      <li class="hf-li">hangfeng11</li>
+    </ul>
+  </body>
+</html>
