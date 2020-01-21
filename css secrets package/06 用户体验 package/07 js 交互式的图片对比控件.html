@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>js 交互式的图片对比控件</title>
+    <style>
+      .image-slider {
+        position: relative;
+        display: inline-block;
+      }
+      .image-slider > div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        width: 50%;
+      }
+      .image-slider img {
+        width: 400px;
+        height: 400px;
+        user-select: none;
+      }
+      .image-slider input {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        margin: 0;
+        filter: contrast(0.5);
+        mix-blend-mode: luminosity;
+        width: 50%;
+        transform: scale(2);
+        transform-origin: left bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-slider">
+      <img src="../../images/ice_gril.jpeg" alt="" />
+      <img src="../../images/snowGril.jpeg" alt="" />
+    </div>
+    <script>
+      function $$(selector, context) {
+        context = context || document;
+        let elements = context.querySelectorAll(selector);
+        return [].slice.call(elements);
+      }
+      $$(".image-slider").forEach(slider => {
+        let div = document.createElement("div");
+        console.log(slider);
+        let img = slider.querySelector("img");
+        slider.insertBefore(div, img);
+        div.appendChild(img);
+
+        var range = document.createElement("input");
+        range.type = "range";
+        range.oninput = function() {
+          div.style.width = this.value + "%";
+        };
+        console.log(range);
+        slider.appendChild(range);
+      });
+    </script>
+  </body>
+</html>
