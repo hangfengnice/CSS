@@ -1,15 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>自适应垂直居中</title>
-  <style>
-    
-  </style>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>自适应垂直居中</title>
+    <style>
+      .quiz {
+        background-color: white;
+        border: 1px solid #ddd;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .quiz-h {
+        font-size: 100%;
+      }
+      .quiz-p {
+        color: gray;
+      }
+
+      /* 第一种方法 */
+      /* .quiz-h {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 10px;
+      }
+      .quiz-p {
+        display: table-cell;
+        padding-right: 10px;
+      } */
+
+      /* 第二种 */
+      /* .quiz {
+        display: flex;
+        align-items: center;
+        text-align: justify;
+      }
+      .quiz-h {
+      }
+      .quiz-p {
+      } */
+      /* .quiz {
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+        text-align: justify;
+        display: flex;
+      }
+      .quiz-h {
+        margin: auto 0;
+      }
+      .quiz-p {
+        margin: 0 0 0 1em;
+      } */
+
+      /* 第三种 */
+      /* .quiz-h,
+      .quiz-p {
+        display: inline-block;
+      }
+      .quiz {
+        white-space: nowrap;
+      }
+      .quiz-h {
+        margin: 0;
+        padding: 0 10px;
+        vertical-align: middle;
+      }
+      .quiz-p {
+        margin: 0;
+        margin-right: 90px; 
+        vertical-align: middle;
+        white-space: normal;
+      } */
+
+      /* 第四 */
+      .quiz {
+        position: relative;
+        padding-left: 90px;
+        min-height: 24px;
+      }
+      .quiz-h {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        line-height: 1em;
+        margin: -0.5em 0 0;
+      }
+      .quiz-p {
+        margin: 0 10px 0 0;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz">
+      <h6 class="quiz-h">201912</h6>
+      <p class="quiz-p">
+        12月5日，由游戏行业头部媒体游戏陀螺、VR陀螺、陀螺电竞、陀螺财经主办的第四届金陀螺奖颁奖典礼于深圳举办。金陀螺奖是国内游戏业界中最为瞩目的游戏奖项之一，此次大会以“蝶变·向上的力量”为主题，聚焦游戏行业的未来趋势发展、行业创新升级、商业生态新连接等前沿领域，具有极高的代表性和权威性。此次颁奖典礼中，阅文集团根据IP定制改编手游《新斗罗大陆》荣获“年度人气IP类游戏奖”。
+      </p>
+    </div>
+  </body>
 </html>
