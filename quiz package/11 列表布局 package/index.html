@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>列表布局</title>
+  <style>
+   p {
+     overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2;
+    width: 30px;
+   }
+  </style>
+</head>
+<body>
+  <p>
+     多行打点：display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; 多行打点 overflow:hidden也是必需的，和单行ellipsis一样。然后可能有些小伙伴不知道的是：Firefox目前也支持了-webkit-box打点。
+  </p>
+</body>
+</html>

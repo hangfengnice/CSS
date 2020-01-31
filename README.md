@@ -28,3 +28,11 @@
 ## 书籍
 
 1. 2019.11.30 读完了 《css选择器世界》 感到css选择器的不简单 需要多练 多学
+
+### 多行打点
+
+```css
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+```
