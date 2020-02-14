@@ -1,38 +1,25 @@
-# Cascading Style Sheet (CSS)
+# css
 
-## 一些书籍的实例
+## 1. BFC
 
-### css 选择器
+* position: absolute / fixed
+* display: inlin-block / table/ table-cell
+* float 的值不为 none
+* overflow 的值为 hidden / auto / scroll
 
-### css 世界
+使用技巧：两栏布局时 给浮动元素设置 padding / margin
 
-### css 揭秘
+## 2. 层叠顺序
 
-1. 连子符 font-variant-ligatures: common-ligatures;
+* 从低到高
+  * 层叠上下文的 background / border
+  * 负 z-index
+  * block 块状水平盒子
+  * float 浮动盒子
+  * inline / inline-block 水平盒子
+  * z-index：auto 或看成 z-index：0
+  * 正 z-index
 
-- 标签
-  - a
-  - 属性 id href title targe t
-  - img
-  - 属性 height width
-  
-## 属性
+## 3. 绝对定位元素
 
-1. border-bottom , underline
-2. 可以继承的属性 font-family 一般是字体的属性
-3. position
-4. float
-5. px 像素指定高度
-6. a :link :visit :hover :focus :active
-
-## 书籍
-
-1. 2019.11.30 读完了 《css选择器世界》 感到css选择器的不简单 需要多练 多学
-
-### 多行打点
-
-```css
-display: -webkit-box;
--webkit-box-orient: vertical;
--webkit-line-clamp: 2;
-```
+* 绝对定位的元素基于父级的 padding 定位

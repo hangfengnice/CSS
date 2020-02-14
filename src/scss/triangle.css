@@ -1,0 +1,44 @@
+/* 方法1  border */
+.triangle {
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: deepskyblue;
+}
+.ft {
+  font-size: 0;
+}
+.ib {
+  padding: 0;
+}
+/* font-size: 0;  */
+/* inline 元素 */
+
+/* 方法2 clip-path */
+.triangle1 {
+  width: 30px;
+  height: 30px;
+  clip-path: polygon(0 0, 50% 50%, 0 100%);
+  background-color: lightpink;
+}
+.ib1 {
+  border: none;
+}
+
+/* 方法3 transfrom + ::before */
+.triangle2 {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: lightgreen;
+}
+.triangle2::before {
+  content: "";
+  position: absolute;
+  height: 64%;
+  width: 150%;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+
