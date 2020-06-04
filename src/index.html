@@ -5,11 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>css</title>
   <style>
-
+    p {
+      padding: 10px;
+      background-color: black;
+    }
+    [CLass] {
+      color: white;
+    }
+    [CLASS~=CONtent i] {
+      text-decoration: line-through;
+    }
+    .\000031-foo {
+      color: aqua;
+    }
+    .-a,
+    .-- {
+      color: red;
+    }
   </style>
 </head>
 <body>
-  <div class="reveal">sword art online</div>
+  <span class="1-foo">颜色是</span>
+  <div class="-a">aa</div>
+  <div class="--">bb</div>
+  <p class="content">颜色是》</p>
   <script>
 
   </script>
