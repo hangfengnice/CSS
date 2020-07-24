@@ -5,32 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>css</title>
   <style>
-    p {
-      padding: 10px;
-      background-color: black;
-    }
-    [CLass] {
-      color: white;
-    }
-    [CLASS~=CONtent i] {
-      text-decoration: line-through;
-    }
-    .\000031-foo {
-      color: aqua;
-    }
-    .-a,
-    .-- {
-      color: red;
+    .g {
+      height: 1200px;
     }
   </style>
 </head>
 <body>
-  <span class="1-foo">颜色是</span>
-  <div class="-a">aa</div>
-  <div class="--">bb</div>
-  <p class="content">颜色是》</p>
+  <button id='click'>click</button>
+  <div class="g">
+    <div id="child"></div>
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+    红酒饿哦就哦进啊哦进哦啊就哦进哦啊就哦啊就哦进啊哦进安静哦傲娇进啊哦进啊就哦进啊进哦aj
+  </div>
+  <div>
+    <blockquote id="outer">
+      <p>Hello</p>
+      <div id="inner">
+        <p>World</p>
+      </div>
+    </blockquote>
+    </div>
+    <button id='btn'>mybtn</button>
+    <div id="test" class="test" data-foo-hllo='bar'>test</div>
   <script>
 
+    let g = document.getElementsByClassName('g')[0]
+
+    let test = document.getElementById('test')
+    test.setAttribute('className', 'yese')
+    let names = test.getAttributeNames()
+    console.log(names)
+    delete test.dataset.fooHllo
   </script>
 </body>
 </html>
